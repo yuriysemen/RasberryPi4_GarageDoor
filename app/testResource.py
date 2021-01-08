@@ -8,8 +8,8 @@ class TestResource(Resource):
     """Rules resource."""
 
     def get(self) -> Dict:
-        door.open()
+        door.activate()
         return {
             "code": "success",
-            "state": door.state
+            "state": str(door.state)
         }
